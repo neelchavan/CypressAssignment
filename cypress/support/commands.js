@@ -46,11 +46,17 @@ Cypress.Commands.add("openProductDetailPage", (nameOfProduct) => {
   storePage.getProductNames().each((el, index, list) => {
     if (el.text().includes(nameOfProduct)) {
       storePage.getProductNames().eq(index).click();
-      // // verify if we are on the correct product detail page
-      // let name = nameOfProduct.toLowerCase().replaceAll(" ", "-");
-      // cy.url().should("include", name);
+    }
+  });
+});
 
-      // cy.go("back");
+// add desired product to the cart
+Cypress.Commands.add("addProductToCart", (nameOfProduct) => {
+  const storePage = new StorePage();
+  storePage.getProductNames().each((el, index, list) => {
+    if (el.text() === nameOfProduct) {
+      // index+1 because nth:child() indexes starts from 1.
+      storePage.getAddToCartButton(index + 1).click();
     }
   });
 });

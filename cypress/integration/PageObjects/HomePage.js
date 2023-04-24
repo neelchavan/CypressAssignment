@@ -15,5 +15,13 @@ class HomePage {
   getStoreLinkAndClick() {
     return cy.contains("Store").click();
   }
+
+  getOpenCartBtnAndClick() {
+    return cy.get("#ast-desktop-header .cart-container").click();
+  }
+
+  getLogoutBtnAndClick() {
+    return cy.contains("Logout").click();
+  }
 }
 export default HomePage;

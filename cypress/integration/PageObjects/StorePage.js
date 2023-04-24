@@ -3,8 +3,8 @@ class StorePage {
     return cy.get(".product-type-simple h2");
   }
 
-  getAddToCartButton() {
-    return cy.contains("Add to cart");
+  getAddToCartButton(index) {
+    return cy.get(`.products.columns-4 li:nth-child(${index}) .button`);
   }
 }
 
