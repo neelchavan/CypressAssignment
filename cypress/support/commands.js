@@ -23,3 +23,34 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+import AccountPage from "../integration/PageObjects/AccountPage";
+import HomePage from "../integration/PageObjects/HomePage";
+import StorePage from "../integration/PageObjects/StorePage";
+
+// login method
+Cypress.Commands.add("login", function (username, password) {
+  const homePage = new HomePage();
+  const accountPage = new AccountPage();
+
+  // go to account page from home page
+  homePage.getAccountLinkAndClick();
+  accountPage.getLoginusernameField().type(username);
+  accountPage.getLoginPasswordField().type(password);
+  accountPage.getLoginButonAndClick();
+});
+
+// open desired product detail page
+Cypress.Commands.add("openProductDetailPage", (nameOfProduct) => {
+  const storePage = new StorePage();
+  storePage.getProductNames().each((el, index, list) => {
+    if (el.text().includes(nameOfProduct)) {
+      storePage.getProductNames().eq(index).click();
+      // // verify if we are on the correct product detail page
+      // let name = nameOfProduct.toLowerCase().replaceAll(" ", "-");
+      // cy.url().should("include", name);
+
+      // cy.go("back");
+    }
+  });
+});
