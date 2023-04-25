@@ -10,7 +10,9 @@
     "lastName":"chavan",
     "searchQuery":"India",
     "streetAddress":"shivaji peth",
-    "postalCode":4161212,
-    "city":"koplapur"
+    "postalCode":416012,
+    "city":"koplapur",
+    "searchQueryState":"Maharashtra",
+    "email":"a@gmail.com"
   }
 }

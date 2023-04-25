@@ -11,15 +11,31 @@ class CheckoutPage {
     return cy.get("#select2-billing_country-container").click();
   }
 
-  getCountrySearchBox(value) {
+  getCountrySearchBoxAndType(value) {
     return cy.get(".select2-search__field").type(value);
+  }
+
+  getCounryOptions() {
+    return cy.get("[role='option']");
+  }
+
+  getSateDropdownAndClick() {
+    return cy.get("#select2-billing_state-container").click();
+  }
+
+  getStateSearchBoxAndType(value) {
+    return cy.get(".select2-search__field").type(value);
+  }
+
+  getStateOptions() {
+    return cy.get("[role='option']");
   }
 
   getStreetAddressTextBoxAndType(value) {
     return cy.get("#billing_address_1").type(value);
   }
 
-  getPostalCodeTextBoxAndType(value) {
+  getPinCodeTextBoxAndType(value) {
     return cy.get("#billing_postcode").type(value);
   }
 
@@ -37,6 +53,10 @@ class CheckoutPage {
 
   getCheckoutPageErrorAlerts() {
     return cy.get(".woocommerce-error");
+  }
+
+  getOrderRecievedMsg() {
+    return cy.get(".woocommerce-order p");
   }
 }
 export default CheckoutPage;
