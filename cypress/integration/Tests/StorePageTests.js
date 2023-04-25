@@ -11,7 +11,6 @@ describe("Store page tests", () => {
   beforeEach(function () {
     cy.fixture("example").then(function (data) {
       this.data = data;
-      cy.log(this.data.productNames);
     });
     cy.visit(Cypress.env("baseUrl"));
   });

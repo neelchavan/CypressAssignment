@@ -4,5 +4,13 @@
   "productNames": ["Basic Blue Jeans", "Blue Tshirt"],
   "searchQuery": "Blue",
   "categoryVal":"men",
-  "sortingOption":"price"
+  "sortingOption":"price",
+  "formData":{
+    "firstName":"neel",
+    "lastName":"chavan",
+    "searchQuery":"India",
+    "streetAddress":"shivaji peth",
+    "postalCode":4161212,
+    "city":"koplapur"
+  }
 }

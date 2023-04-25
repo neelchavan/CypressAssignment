@@ -6,5 +6,9 @@ class CartPage {
   getRemoveProductBtnFromCartAndClick() {
     return cy.get(".product-remove a").click();
   }
+
+  getProceedToCheckoutBtnAndClick() {
+    return cy.contains("Proceed to checkout").click();
+  }
 }
 export default CartPage;
