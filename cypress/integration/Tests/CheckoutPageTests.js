@@ -18,18 +18,18 @@ describe("checkout page tests", () => {
     cy.visit(Cypress.env("baseUrl"));
   });
 
-  // it("Verify if user cannot place the order without filling the mandatory fields", function () {
-  //   // go to store page from home page
-  //   homePage.getStoreLinkAndClick();
-  //   // add desired product to cart
-  //   cy.addProductToCart(this.data.productNames[1]);
-  //   // go to cart and proceed to checkout
-  //   homePage.getOpenCartBtnAndClick();
-  //   cartPage.getProceedToCheckoutBtnAndClick();
-  //   // verify that without filling the form you cannot place the order
-  //   checkoutPage.getPlaceOrderBtnAndClick();
-  //   checkoutPage.getCheckoutPageErrorAlerts().should("be.visible");
-  // });
+  it("Verify if user cannot place the order without filling the mandatory fields", function () {
+    // go to store page from home page
+    homePage.getStoreLinkAndClick();
+    // add desired product to cart
+    cy.addProductToCart(this.data.productNames[1]);
+    // go to cart and proceed to checkout
+    homePage.getOpenCartBtnAndClick();
+    cartPage.getProceedToCheckoutBtnAndClick();
+    // verify that without filling the form you cannot place the order
+    checkoutPage.getPlaceOrderBtnAndClick();
+    checkoutPage.getCheckoutPageErrorAlerts().should("be.visible");
+  });
 
   it("Verify if user can successfully purchase the product", function () {
     // go to store page from home page
