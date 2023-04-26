@@ -11,6 +11,6 @@ module.exports = defineConfig({
       screenshotOnRunFailure = true;
       require("cypress-mochawesome-reporter/plugin")(on); // for html reports
     },
-    specPattern: "cypress/integration/Tests/CheckoutPageTests.js",
+    specPattern: "cypress/integration/Tests/*.js",
   },
 });
