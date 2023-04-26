@@ -72,6 +72,6 @@ describe("checkout page tests", () => {
 
   it("this will pass", () => {
     cy.log("hi");
-    assert(true);
+    assert(false);
   });
 });
