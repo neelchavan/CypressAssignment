@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx D:/Neel/VsCodeWorkspace/Cypress/CypressAssignment/node_modules/.bin/cypress run",
+    "test": "npx cypress run",
     "testHeaded": "npm run test -- --headed",
     "testHeadedChrome": "npm run test -- --headed --browser=chrome",
     "testHeadedFirefox": "npm run test -- --headed --browser=firefox",
