@@ -69,9 +69,4 @@ describe("checkout page tests", () => {
       expect(el.text()).to.equal(""); // Thank you. Your order has been received.
     });
   });
-
-  // it("this will pass", () => {
-  //   cy.log("hi");
-  //   assert(true);
-  // });
 });
