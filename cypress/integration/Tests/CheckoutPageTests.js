@@ -38,7 +38,7 @@ describe("checkout page tests", () => {
     cy.addProductToCart(this.data.productNames[1]);
     // go to cart and proceed to checkout
     homePage.getOpenCartBtnAndClick();
-    cy.wait(1500);
+    cy.wait(2000);
     cartPage.getProceedToCheckoutBtnAndClick();
     // fill the form
     checkoutPage.getFirstNameTextBoxAndType(this.data.formData.firstName);
